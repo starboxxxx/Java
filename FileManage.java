@@ -13,7 +13,6 @@ public class FileManage {
 	public Properties readFile(String FilePath) {
 		
 		try {	
-			
 			Properties prop = new Properties();
 			FileInputStream fis = new FileInputStream(FilePath);
 			prop.load(new java.io.BufferedInputStream(fis));
@@ -25,6 +24,7 @@ public class FileManage {
 	}
 	
 	public void makeFile(String filePath, LinkedHashMap<String,String>map) {
+		
 		try {
 			File file = new File(filePath);
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
